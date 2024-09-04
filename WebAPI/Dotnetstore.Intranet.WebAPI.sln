@@ -1,8 +1,26 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WebAPI", "WebAPI", "{C0F513F6-C94C-42EF-9D9D-1A69A6AB48DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnetstore.Intranet.WebAPI", "src\Dotnetstore.Intranet.WebAPI\Dotnetstore.Intranet.WebAPI.csproj", "{F954B2A4-B4FE-4874-ABDB-797B887EDAF8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F41973BB-5507-4872-A9D2-88413F58F802}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F954B2A4-B4FE-4874-ABDB-797B887EDAF8} = {C0F513F6-C94C-42EF-9D9D-1A69A6AB48DC}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F954B2A4-B4FE-4874-ABDB-797B887EDAF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F954B2A4-B4FE-4874-ABDB-797B887EDAF8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F954B2A4-B4FE-4874-ABDB-797B887EDAF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F954B2A4-B4FE-4874-ABDB-797B887EDAF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

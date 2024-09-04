@@ -1,0 +1,6 @@
+﻿services:
+  dotnetstore.intranet.webapi:
+    image: dotnetstore.intranet.webapi
+    build:
+      context: .
+      dockerfile: src/Dotnetstore.Intranet.WebAPI/Dockerfile
