@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using Dotnetstore.Intranet.WebAPI.Utility.Entities;
+using Dotnetstore.Intranet.WebAPI.Utility.Services;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore;
 using Xunit;

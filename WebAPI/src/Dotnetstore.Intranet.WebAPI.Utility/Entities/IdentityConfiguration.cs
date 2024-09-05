@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Dotnetstore.Intranet.WebAPI.Utility.Services;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace Dotnetstore.Intranet.WebAPI.Utility.Entities;
 

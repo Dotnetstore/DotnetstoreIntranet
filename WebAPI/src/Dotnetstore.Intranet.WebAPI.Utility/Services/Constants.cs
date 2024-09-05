@@ -1,4 +1,4 @@
-﻿namespace Dotnetstore.Intranet.WebAPI.Utility;
+﻿namespace Dotnetstore.Intranet.WebAPI.Utility.Services;
 
 public class Constants
 {
