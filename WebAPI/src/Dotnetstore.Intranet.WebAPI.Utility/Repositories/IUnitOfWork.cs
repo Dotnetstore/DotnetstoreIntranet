@@ -2,7 +2,7 @@
 
 namespace Dotnetstore.Intranet.WebAPI.Utility.Repositories;
 
-public interface IUnitOfWork
+public interface IUnitOfWork : IDisposable
 {
     IGenericRepository<T> Repository<T>() where T : BaseAuditableEntity;
 

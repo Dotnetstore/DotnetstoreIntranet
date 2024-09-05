@@ -1,9 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
     <PropertyGroup>
-        <TargetFramework>net8.0</TargetFramework>
-        <Nullable>enable</Nullable>
-        <ImplicitUsings>enable</ImplicitUsings>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
     </PropertyGroup>
 
@@ -18,7 +15,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Dotnetstore.Intranet.WebAPI.Utility\Dotnetstore.Intranet.WebAPI.Utility.csproj" />
+      <ProjectReference Include="..\Dotnetstore.Intranet.WebAPI.Organization\Dotnetstore.Intranet.WebAPI.Organization.csproj" />
     </ItemGroup>
 
 </Project>
