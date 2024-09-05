@@ -1,10 +1,13 @@
 using Dotnetstore.Intranet.WebAPI.Extensions;
+using FastEndpoints;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services
-    .AddWebAPI();
+    .AddWebApi();
 
 var app = builder.Build();
 
-app.Run();
+app.UseFastEndpoints();
+
+app.Run(); 

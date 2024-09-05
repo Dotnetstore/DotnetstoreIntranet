@@ -17,4 +17,8 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Dotnetstore.Intranet.WebAPI.Utility\Dotnetstore.Intranet.WebAPI.Utility.csproj" />
+    </ItemGroup>
+
 </Project>
