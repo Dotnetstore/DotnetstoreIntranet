@@ -6,7 +6,7 @@ namespace Dotnetstore.Intranet.WebAPI.Utility.Tests.Entities;
 
 public class PersonTests
 {
-    private class TestPerson : Person { }
+    private class TestPerson : Person;
 
     [Fact]
     public void Properties_SetAndGet_ReturnsCorrectValues()

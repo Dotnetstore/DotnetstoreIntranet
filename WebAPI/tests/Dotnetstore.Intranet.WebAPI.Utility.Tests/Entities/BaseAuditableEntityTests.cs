@@ -7,7 +7,7 @@ namespace Dotnetstore.Intranet.WebAPI.Utility.Tests.Entities;
 
 public class BaseAuditableEntityTests
 {
-    private class TestAuditableEntity : BaseAuditableEntity { }
+    private class TestAuditableEntity : BaseAuditableEntity;
 
     [Fact]
     public void Properties_SetAndGet_ReturnsCorrectValues()
