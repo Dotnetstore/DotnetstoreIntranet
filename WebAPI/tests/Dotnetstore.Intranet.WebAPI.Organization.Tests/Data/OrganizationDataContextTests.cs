@@ -1,6 +1,6 @@
 ﻿using Dotnetstore.Intranet.WebAPI.Organization.Data;
 using Dotnetstore.Intranet.WebAPI.Organization.Users;
-using Dotnetstore.Intranet.WebAPI.TestHelper;
+using Dotnetstore.Intranet.WebAPI.TestHelper.Data;
 using FluentAssertions;
 using FluentAssertions.Execution;
 using Microsoft.EntityFrameworkCore;

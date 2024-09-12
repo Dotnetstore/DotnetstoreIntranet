@@ -25,6 +25,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnetstore.Intranet.WebAPI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnetstore.Intranet.WebAPI.Organization.Tests", "tests\Dotnetstore.Intranet.WebAPI.Organization.Tests\Dotnetstore.Intranet.WebAPI.Organization.Tests.csproj", "{523CC756-84A9-4EDB-A21E-4F92B35A4CCD}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SDK", "SDK", "{B1FC6DAB-97EC-4BEE-BD73-3944736F3CD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnetstore.Intranet.WebAPI.SDK", "src\Dotnetstore.Intranet.WebAPI.SDK\Dotnetstore.Intranet.WebAPI.SDK.csproj", "{D111A0DF-774A-4F38-A832-D5DCD58B6DED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnetstore.Intranet.WebAPI.SDK.Tests", "tests\Dotnetstore.Intranet.WebAPI.SDK.Tests\Dotnetstore.Intranet.WebAPI.SDK.Tests.csproj", "{D9A7BB79-B4CF-4420-9E7A-3210BAFC230B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnetstore.Intranet.WebAPI.Organization.Tests.Integration", "tests\Dotnetstore.Intranet.WebAPI.Organization.Tests.Integration\Dotnetstore.Intranet.WebAPI.Organization.Tests.Integration.csproj", "{B4DC2D00-00F6-4F72-930C-418EA0460F43}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +45,9 @@ Global
 		{4407A6C3-4652-429F-A0E4-08DEE3DE3292} = {E87AFA32-2883-42EC-A072-291495C00F3A}
 		{D5F05271-5F4A-43EB-BDEC-FE1CDEF426D8} = {8D652B63-228B-442F-994C-C2C84BBF1823}
 		{523CC756-84A9-4EDB-A21E-4F92B35A4CCD} = {8D652B63-228B-442F-994C-C2C84BBF1823}
+		{D111A0DF-774A-4F38-A832-D5DCD58B6DED} = {B1FC6DAB-97EC-4BEE-BD73-3944736F3CD5}
+		{D9A7BB79-B4CF-4420-9E7A-3210BAFC230B} = {B1FC6DAB-97EC-4BEE-BD73-3944736F3CD5}
+		{B4DC2D00-00F6-4F72-930C-418EA0460F43} = {8D652B63-228B-442F-994C-C2C84BBF1823}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F954B2A4-B4FE-4874-ABDB-797B887EDAF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -63,5 +74,17 @@ Global
 		{523CC756-84A9-4EDB-A21E-4F92B35A4CCD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{523CC756-84A9-4EDB-A21E-4F92B35A4CCD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{523CC756-84A9-4EDB-A21E-4F92B35A4CCD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D111A0DF-774A-4F38-A832-D5DCD58B6DED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D111A0DF-774A-4F38-A832-D5DCD58B6DED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D111A0DF-774A-4F38-A832-D5DCD58B6DED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D111A0DF-774A-4F38-A832-D5DCD58B6DED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D9A7BB79-B4CF-4420-9E7A-3210BAFC230B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D9A7BB79-B4CF-4420-9E7A-3210BAFC230B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D9A7BB79-B4CF-4420-9E7A-3210BAFC230B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D9A7BB79-B4CF-4420-9E7A-3210BAFC230B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4DC2D00-00F6-4F72-930C-418EA0460F43}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4DC2D00-00F6-4F72-930C-418EA0460F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4DC2D00-00F6-4F72-930C-418EA0460F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4DC2D00-00F6-4F72-930C-418EA0460F43}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

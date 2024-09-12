@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace Dotnetstore.Intranet.WebAPI.TestHelper;
+namespace Dotnetstore.Intranet.WebAPI.TestHelper.Data;
 
 public static class DataHelper
 {

@@ -1,4 +1,6 @@
 ﻿using Dotnetstore.Intranet.WebAPI.Utility.Entities;
+using Dotnetstore.Intranet.WebAPI.Utility.Extensions;
+using Dotnetstore.Intranet.WebAPI.Utility.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
@@ -37,27 +39,27 @@ internal sealed class UserConfiguration : IdentityConfiguration<User>
             .ValueGeneratedNever()
             .IsRequired();
 
-        // builder
-        //     .HasData(
-        //         UserBuilder.Create()
-        //             .WithUserId(new UserId(Constants.SystemUserId))
-        //             .WithUsername("hasse29@hotmail.com")
-        //             .WithPassword("7101263924".Hash("Salt1", "Salt2", "Salt3", "Salt4"))
-        //             .WithSalt1("Salt1")
-        //             .WithSalt2("Salt2")
-        //             .WithSalt3("Salt3")
-        //             .WithSalt4("Salt4")
-        //             .WithIsBlocked(false)
-        //             .WithLastName("Sjödin")
-        //             .WithFirstName("Hans")
-        //             .WithMiddleName("Mikael")
-        //             .WithEnglishName("hasse")
-        //             .WithDateOfBirth(new DateTime(1971, 5, 20))
-        //             .WithIsMale(true)
-        //             .WithLastNameFirst(true)
-        //             .WithCreatedDate(DateTimeOffset.Now)
-        //             .WithIsSystem(true)
-        //             .WithIsGdpr(false)
-        //             .Build());
+        builder
+            .HasData(
+                UserBuilder.Create()
+                    .WithUserId(new UserId(Constants.SystemUserId))
+                    .WithUsername("hasse29@hotmail.com")
+                    .WithPassword("7101263924".Hash("Salt1", "Salt2", "Salt3", "Salt4"))
+                    .WithSalt1("Salt1")
+                    .WithSalt2("Salt2")
+                    .WithSalt3("Salt3")
+                    .WithSalt4("Salt4")
+                    .WithIsBlocked(false)
+                    .WithLastName("Sjödin")
+                    .WithFirstName("Hans")
+                    .WithMiddleName("Mikael")
+                    .WithEnglishName("hasse")
+                    .WithDateOfBirth(new DateTime(1971, 5, 20))
+                    .WithIsMale(true)
+                    .WithLastNameFirst(true)
+                    .WithCreatedDate(DateTimeOffset.Now)
+                    .WithIsSystem(true)
+                    .WithIsGdpr(false)
+                    .Build());
     }
 }

@@ -1,6 +1,8 @@
 ﻿using System.Reflection;
 using Dotnetstore.Intranet.WebAPI.Organization.Data;
+using Dotnetstore.Intranet.WebAPI.Organization.Users;
 using Dotnetstore.Intranet.WebAPI.Utility.Extensions;
+using FastEndpoints;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -13,24 +15,18 @@ public static class ServiceCollectionExtensions
         IConfiguration configuration, 
         List<Assembly> mediatorAssemblies)
     {
-        mediatorAssemblies.Add((Assembly)typeof(IOrganizationAssemblyMarker).Assembly);
+        mediatorAssemblies.Add(typeof(IOrganizationAssemblyMarker).Assembly);
         
         var connectionString = configuration.GetConnectionString("IntranetConnectionString");
         ArgumentException.ThrowIfNullOrWhiteSpace(connectionString, nameof(connectionString));
 
         services
             .AddScoped<IOrganizationUnitOfWork, OrganizationUnitOfWork>()
-            .AddDbContext<OrganizationDataContext>(connectionString)
+            .AddScoped<IUserRepository, UserRepository>()
+            .AddScoped<IUserService, UserService>()
+            .AddFastEndpoints()
+            .AddDbContext<OrganizationDataContext>(connectionString, true, false)
             .EnsureDbCreated<OrganizationDataContext>();
-        //     .AddScoped<IUserRepository, UserRepository>()
-        //     .AddScoped<IUserService, UserService>()
-        //     .AddFastEndpoints()
-        //     .AddDbContext<OrganizationDataContext>(connectionString);
-        
-        using var scope = services.BuildServiceProvider().CreateScope();
-        var context = scope.ServiceProvider.GetRequiredService<OrganizationDataContext>();
-        
-        context.Database.EnsureCreated();
 
         return services;
     }

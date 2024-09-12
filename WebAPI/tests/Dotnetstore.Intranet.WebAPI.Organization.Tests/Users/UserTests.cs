@@ -1,4 +1,8 @@
-﻿using Dotnetstore.Intranet.WebAPI.Organization.Users;
+﻿using Dotnetstore.Intranet.WebAPI.Organization.EmailVerificationTokens;
+using Dotnetstore.Intranet.WebAPI.Organization.UserEmails;
+using Dotnetstore.Intranet.WebAPI.Organization.UserInUserGroups;
+using Dotnetstore.Intranet.WebAPI.Organization.UserInUserRoles;
+using Dotnetstore.Intranet.WebAPI.Organization.Users;
 using FluentAssertions;
 using FluentAssertions.Execution;
 using Xunit;
@@ -22,7 +26,11 @@ public class UserTests
             Salt3 = "Salt3",
             Salt4 = "Salt4",
             IsBlocked = false,
-            BlockedDate = null
+            BlockedDate = null,
+            EmailVerificationTokens = new List<EmailVerificationToken>(),
+            UserInUserRoles = new List<UserInUserRole>(),
+            UserInUserGroups = new List<UserInUserGroup>(),
+            UserEmails = new List<UserEmail>()
         };
 
         // Act & Assert
@@ -37,6 +45,10 @@ public class UserTests
             user.Salt4.Should().Be("Salt4");
             user.IsBlocked.Should().BeFalse();
             user.BlockedDate.Should().BeNull();
+            user.EmailVerificationTokens.Should().BeEmpty();
+            user.UserInUserRoles.Should().BeEmpty();
+            user.UserInUserGroups.Should().BeEmpty();
+            user.UserEmails.Should().BeEmpty();
         }
     }
 }

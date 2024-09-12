@@ -1,6 +1,6 @@
 ﻿using Dotnetstore.Intranet.WebAPI.Organization.Data;
 using Dotnetstore.Intranet.WebAPI.Organization.Users;
-using Dotnetstore.Intranet.WebAPI.TestHelper;
+using Dotnetstore.Intranet.WebAPI.TestHelper.Data;
 using FluentAssertions;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Xunit;
@@ -41,5 +41,72 @@ public class UserConfigurationTests
         // Assert
         usernameProperty.Should().NotBeNull();
         usernameProperty!.IsNullable.Should().BeFalse();
+    }
+
+    [Fact]
+    public void Email_IsConfiguredCorrectly()
+    {
+        // Arrange
+        var options = DataHelper.CreateOptions<OrganizationDataContext>();
+
+        // Act
+        using var context = new OrganizationDataContext(options);
+        var entityType = context.Model.FindEntityType(typeof(User));
+        var emailProperty = entityType!.FindNavigation(nameof(User.UserEmails));
+
+        // Assert
+        emailProperty.Should().NotBeNull();
+        emailProperty!.IsCollection.Should().BeTrue();
+    }
+
+    [Fact]
+    public void UserInUserRoles_IsConfiguredCorrectly()
+    {
+        // Arrange
+        var options = DataHelper.CreateOptions<OrganizationDataContext>();
+
+        // Act
+        using var context = new OrganizationDataContext(options);
+        var entityType = context.Model.FindEntityType(typeof(User));
+        var navigation = entityType!.FindNavigation(nameof(User.UserInUserRoles));
+
+        // Assert
+        navigation.Should().NotBeNull();
+        navigation!.IsCollection.Should().BeTrue();
+        navigation.ForeignKey.IsOwnership.Should().BeFalse();
+    }
+
+    [Fact]
+    public void UserInUserGroups_IsConfiguredCorrectly()
+    {
+        // Arrange
+        var options = DataHelper.CreateOptions<OrganizationDataContext>();
+
+        // Act
+        using var context = new OrganizationDataContext(options);
+        var entityType = context.Model.FindEntityType(typeof(User));
+        var navigation = entityType!.FindNavigation(nameof(User.UserInUserGroups));
+
+        // Assert
+        navigation.Should().NotBeNull();
+        navigation!.IsCollection.Should().BeTrue();
+        navigation.ForeignKey.IsOwnership.Should().BeFalse();
+    }
+
+    [Fact]
+    public void UserEmails_IsConfiguredCorrectly()
+    {
+        // Arrange
+        var options = DataHelper.CreateOptions<OrganizationDataContext>();
+
+        // Act
+        using var context = new OrganizationDataContext(options);
+        var entityType = context.Model.FindEntityType(typeof(User));
+        var navigation = entityType!.FindNavigation(nameof(User.UserEmails));
+
+        // Assert
+        navigation.Should().NotBeNull();
+        navigation!.IsCollection.Should().BeTrue();
+        navigation.ForeignKey.IsOwnership.Should().BeFalse();
     }
 }
