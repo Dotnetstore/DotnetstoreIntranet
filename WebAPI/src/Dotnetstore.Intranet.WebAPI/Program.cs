@@ -10,12 +10,15 @@ builder.Services
 var app = builder.Build();
 
 app
-    .UseAuthentication()
-    .UseAuthorization()
+    // .UseAuthentication()
+    // .UseAuthorization()
     .UseFastEndpoints()
     .UseSwaggerGen()
     .UseExceptionHandler();
 
 await app.RunAsync();
 
-public partial class Program;
+namespace Dotnetstore.Intranet.WebAPI
+{
+    public partial class Program;
+}

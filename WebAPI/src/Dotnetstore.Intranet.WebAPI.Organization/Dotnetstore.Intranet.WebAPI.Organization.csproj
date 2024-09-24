@@ -4,4 +4,8 @@
       <ProjectReference Include="..\Dotnetstore.Intranet.WebAPI.Utility\Dotnetstore.Intranet.WebAPI.Utility.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="EmailVerificationTokens\" />
+    </ItemGroup>
+
 </Project>

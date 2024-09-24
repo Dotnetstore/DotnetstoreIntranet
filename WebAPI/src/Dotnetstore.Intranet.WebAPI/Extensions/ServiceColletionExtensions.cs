@@ -1,4 +1,6 @@
 ﻿using System.Reflection;
+using Dotnetstore.Intranet.API.Organization.Extensions;
+using Dotnetstore.Intranet.API.SharedKernel.Extensions;
 using FastEndpoints;
 using FastEndpoints.Swagger;
 
@@ -14,6 +16,8 @@ internal static class ServiceColletionExtensions
 
         services
             .AddFastEndpoints()
+            .AddSharedKernel(mediatorAssemblies)
+            .AddOrganization(configuration)
             .SwaggerDocument(o =>
             {
                 o.DocumentSettings = s =>
@@ -22,7 +26,8 @@ internal static class ServiceColletionExtensions
                     s.Description = "API for Dotnetstore Intranet";
                     s.Version = "1.0";
                 };
-            });
+            })
+            .AddProblemDetails();
 
         // services
         //     .AddHostedService<WorkerService>()
