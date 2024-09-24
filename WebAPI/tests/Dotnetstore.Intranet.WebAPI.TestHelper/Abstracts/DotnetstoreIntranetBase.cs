@@ -1,6 +1,5 @@
 ﻿using FastEndpoints.Testing;
 using Testcontainers.MsSql;
-using Testcontainers.PostgreSql;
 
 namespace Dotnetstore.Intranet.WebAPI.TestHelper.Abstracts;
 

@@ -10,7 +10,7 @@ public sealed class RequestLogger<TRequest> : PreProcessor<TRequest, StateBag>
     {
         var logger = context.HttpContext.Resolve<ILogger<TRequest>>();
         
-        logger.LogInformation($"request:{context.Request.GetType().FullName} path: {context.HttpContext.Request.Path}");
+        logger.LogInformation("Request:{Fullname} Path: {Path}", context.Request.GetType().FullName, context.HttpContext.Request.Path);
         
         return Task.CompletedTask;
     }

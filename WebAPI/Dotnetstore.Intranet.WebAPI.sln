@@ -33,6 +33,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnetstore.Intranet.WebAPI
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnetstore.Intranet.WebAPI.Organization.Tests.Integration", "tests\Dotnetstore.Intranet.WebAPI.Organization.Tests.Integration\Dotnetstore.Intranet.WebAPI.Organization.Tests.Integration.csproj", "{B4DC2D00-00F6-4F72-930C-418EA0460F43}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared Kernel", "Shared Kernel", "{649BB802-C66C-454D-9F77-06A6FD1965DB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnetstore.Intranet.API.SharedKernel", "src\Dotnetstore.Intranet.API.SharedKernel\Dotnetstore.Intranet.API.SharedKernel.csproj", "{68F16B81-2C35-4394-B1DA-492F0BCC2F8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnetstore.Intranet.API.SharedKernel.Tests", "tests\Dotnetstore.Intranet.API.SharedKernel.Tests\Dotnetstore.Intranet.API.SharedKernel.Tests.csproj", "{6E797902-3A2B-4D7A-85EB-C4A7927DC099}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +54,8 @@ Global
 		{D111A0DF-774A-4F38-A832-D5DCD58B6DED} = {B1FC6DAB-97EC-4BEE-BD73-3944736F3CD5}
 		{D9A7BB79-B4CF-4420-9E7A-3210BAFC230B} = {B1FC6DAB-97EC-4BEE-BD73-3944736F3CD5}
 		{B4DC2D00-00F6-4F72-930C-418EA0460F43} = {8D652B63-228B-442F-994C-C2C84BBF1823}
+		{68F16B81-2C35-4394-B1DA-492F0BCC2F8C} = {649BB802-C66C-454D-9F77-06A6FD1965DB}
+		{6E797902-3A2B-4D7A-85EB-C4A7927DC099} = {649BB802-C66C-454D-9F77-06A6FD1965DB}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F954B2A4-B4FE-4874-ABDB-797B887EDAF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -86,5 +94,13 @@ Global
 		{B4DC2D00-00F6-4F72-930C-418EA0460F43}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B4DC2D00-00F6-4F72-930C-418EA0460F43}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B4DC2D00-00F6-4F72-930C-418EA0460F43}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68F16B81-2C35-4394-B1DA-492F0BCC2F8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68F16B81-2C35-4394-B1DA-492F0BCC2F8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68F16B81-2C35-4394-B1DA-492F0BCC2F8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68F16B81-2C35-4394-B1DA-492F0BCC2F8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E797902-3A2B-4D7A-85EB-C4A7927DC099}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E797902-3A2B-4D7A-85EB-C4A7927DC099}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E797902-3A2B-4D7A-85EB-C4A7927DC099}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E797902-3A2B-4D7A-85EB-C4A7927DC099}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

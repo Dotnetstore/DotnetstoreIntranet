@@ -11,7 +11,7 @@ public sealed class DurationLogger<TRequest> : PostProcessor<TRequest, StateBag,
         StateBag state, 
         CancellationToken ct)
     {
-        ctx.HttpContext.Resolve<ILogger<DurationLogger<TRequest>>>().LogInformation("request took {@duration} ms.", state.DurationMillis);
+        ctx.HttpContext.Resolve<ILogger<DurationLogger<TRequest>>>().LogInformation("Request took {@duration} ms.", state.DurationMillis);
 
         return Task.CompletedTask;
     }

@@ -21,7 +21,17 @@ internal sealed class UserRepository(IOrganizationUnitOfWork unitOfWork) : IUser
             .ThenBy(x => x.FirstName)
             .ThenBy(x => x.MiddleName)
             .ThenBy(x => x.EnglishName)
-            .ThenBy(x => x.SocialSecurityNumber);
+            .ThenBy(x => x.SocialSecurityNumber)
+            .AsSplitQuery();
+    }
+
+    async ValueTask<User?> IUserRepository.GetByUsernameAsync(string username, CancellationToken cancellationToken)
+    {
+        var query = GetUserQuery();
+
+        return await query
+            .Where(x => x.Username == username)
+            .FirstOrDefaultAsync(cancellationToken: cancellationToken);
     }
 
     async ValueTask<List<User>> IUserRepository.GetAllNotSystemAsync(CancellationToken ct)
@@ -32,5 +42,24 @@ internal sealed class UserRepository(IOrganizationUnitOfWork unitOfWork) : IUser
             .AsNoTracking()
             .Where(x => !x.IsSystem)
             .ToListAsync(cancellationToken: ct);
+    }
+
+    public async ValueTask<User?> GetByIdAsync(UserId userId, CancellationToken cancellationToken)
+    {
+        var query = GetUserQuery();
+
+        return await query
+            .Where(x => x.UserId == userId)
+            .FirstOrDefaultAsync(cancellationToken: cancellationToken);
+    }
+
+    void IUserRepository.Create(User user)
+    {
+        unitOfWork.Repository<User>().Create(user);
+    }
+
+    async ValueTask IUserRepository.SaveChangesAsync(CancellationToken ct)
+    {
+        await unitOfWork.SaveChangesAsync(ct);
     }
 }

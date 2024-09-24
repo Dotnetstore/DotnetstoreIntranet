@@ -1,5 +1,6 @@
 ﻿using System.Reflection;
 using Dotnetstore.Intranet.WebAPI.Organization.Data;
+using Dotnetstore.Intranet.WebAPI.Organization.UserInUserRoles;
 using Dotnetstore.Intranet.WebAPI.Organization.Users;
 using Dotnetstore.Intranet.WebAPI.Utility.Extensions;
 using FastEndpoints;
@@ -22,6 +23,8 @@ public static class ServiceCollectionExtensions
 
         services
             .AddScoped<IOrganizationUnitOfWork, OrganizationUnitOfWork>()
+            .AddScoped<IUserInUserRoleRepository, UserInUserRoleRepository>()
+            .AddScoped<IUserInUserRoleService, UserInUserRoleService>()
             .AddScoped<IUserRepository, UserRepository>()
             .AddScoped<IUserService, UserService>()
             .AddFastEndpoints()

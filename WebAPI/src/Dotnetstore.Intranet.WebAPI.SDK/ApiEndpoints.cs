@@ -13,6 +13,8 @@ public static class ApiEndpoints
             private const string UserBase = $"{OrganizationBase}/users";
             
             public const string GetAll = UserBase;
+            public const string GetByUsername = $"{UserBase}/Username";
+            public const string Create = UserBase;
         }
     }
 }

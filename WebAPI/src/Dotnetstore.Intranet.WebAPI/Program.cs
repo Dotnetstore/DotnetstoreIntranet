@@ -1,6 +1,4 @@
 using Dotnetstore.Intranet.WebAPI.Extensions;
-using FastEndpoints;
-using FastEndpoints.Swagger;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,7 +16,4 @@ app
 
 await app.RunAsync();
 
-namespace Dotnetstore.Intranet.WebAPI
-{
-    public partial class Program;
-}
+public partial class Program;

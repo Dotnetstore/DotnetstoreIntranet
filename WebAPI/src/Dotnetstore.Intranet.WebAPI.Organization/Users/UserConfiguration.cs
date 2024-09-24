@@ -44,7 +44,7 @@ internal sealed class UserConfiguration : IdentityConfiguration<User>
                 UserBuilder.Create()
                     .WithUserId(new UserId(Constants.SystemUserId))
                     .WithUsername("hasse29@hotmail.com")
-                    .WithPassword("7101263924".Hash("Salt1", "Salt2", "Salt3", "Salt4"))
+                    .WithPassword("Pa$$word321!".Hash("Salt1", "Salt2", "Salt3", "Salt4"))
                     .WithSalt1("Salt1")
                     .WithSalt2("Salt2")
                     .WithSalt3("Salt3")
