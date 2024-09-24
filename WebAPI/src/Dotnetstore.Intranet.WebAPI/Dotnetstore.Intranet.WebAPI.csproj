@@ -14,4 +14,8 @@
       </Content>
     </ItemGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\Dotnetstore.Intranet.API.Organization\Dotnetstore.Intranet.API.Organization.csproj" />
+    </ItemGroup>
+
 </Project>

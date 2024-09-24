@@ -1,4 +1,6 @@
 using Dotnetstore.Intranet.WebAPI.Extensions;
+using FastEndpoints;
+using FastEndpoints.Swagger;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -39,6 +39,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnetstore.Intranet.API.Sh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnetstore.Intranet.API.SharedKernel.Tests", "tests\Dotnetstore.Intranet.API.SharedKernel.Tests\Dotnetstore.Intranet.API.SharedKernel.Tests.csproj", "{6E797902-3A2B-4D7A-85EB-C4A7927DC099}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dotnetstore.Intranet.API.Organization", "src\Dotnetstore.Intranet.API.Organization\Dotnetstore.Intranet.API.Organization.csproj", "{95F49B87-590D-4280-8E02-B49EAA7AC585}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -56,6 +58,7 @@ Global
 		{B4DC2D00-00F6-4F72-930C-418EA0460F43} = {8D652B63-228B-442F-994C-C2C84BBF1823}
 		{68F16B81-2C35-4394-B1DA-492F0BCC2F8C} = {649BB802-C66C-454D-9F77-06A6FD1965DB}
 		{6E797902-3A2B-4D7A-85EB-C4A7927DC099} = {649BB802-C66C-454D-9F77-06A6FD1965DB}
+		{95F49B87-590D-4280-8E02-B49EAA7AC585} = {8D652B63-228B-442F-994C-C2C84BBF1823}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{F954B2A4-B4FE-4874-ABDB-797B887EDAF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -102,5 +105,9 @@ Global
 		{6E797902-3A2B-4D7A-85EB-C4A7927DC099}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6E797902-3A2B-4D7A-85EB-C4A7927DC099}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6E797902-3A2B-4D7A-85EB-C4A7927DC099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95F49B87-590D-4280-8E02-B49EAA7AC585}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95F49B87-590D-4280-8E02-B49EAA7AC585}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95F49B87-590D-4280-8E02-B49EAA7AC585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95F49B87-590D-4280-8E02-B49EAA7AC585}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
